@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form App Conta Calorie</title>
+</head>
+<body>
+
+    <form id="form" action="">
+        
+            <h2>Calcola il tuo fabbisogno calorico giornaliero</h2>
+            <label for="eta">Età:</label><br>
+            <input type="text"name="eta"><br>
+            <label for="peso">Peso in Kg:</label><br>
+            <input type="text" name="peso"><br>
+            <label for="altezza">Altezza in cm:</label><br>
+            <input type="text" name="altezza"><br>
+            <label for="sesso">Sesso:</label><br>
+            <select name="sesso" id="">
+                <option value="">Seleziona...</option>
+                <option value="donna">Donna</option>
+                <option value="uomo">Uomo</option>
+            </select><br>
+            <div class="azioni">
+                <button type="submit" class="conferma">Calcola</button>
+                <button type="button" id="resetta" class="cancella">Cancella</button>
+            </div>
+           
+        
+
+    </form>
+
+    <div id="risultato">
+    
+    </div>
+    <script src="form.js"></script>
+    
+    
+</body>
+</html>

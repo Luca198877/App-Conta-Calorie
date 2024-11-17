@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #33d84c, #e40202);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
+}
+@keyframes gradient-animation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#welcome {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    background-color: white;
+}
+
+#form {
+    width: 70%;
+    height: auto;
+    margin:100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    background-color: #f4f1f2;
+    border-radius: 20px ;
+    border-color:2px #a50a22;
+    gap:10px
+}
+#form fieldset {
+    width: 0%;
+    border-radius: 20px;
+}
+#risultato {
+    width: 60%;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap:30px;
+    display: none;
+}
+#risultato a {
+    text-decoration: none;
+    display: block;
+    margin:20px auto;
+    width: 90px;
+    text-align: center;
+    border: 2px solid rgb(78, 119, 2);
+    border-radius: 12px;
+    background-color: #33d84c;
+    color: white;
+    cursor: pointer;
+    
+}
+
+#risultato a:hover {
+    background-color: gold;
+    font-weight: bold;
+}
+#risultato.risultato-attivo {
+    width: 60%;
+    height: 150px;
+    margin: 100px auto;
+    background-color: #f4f1f2;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    text-align: center;
+    
+}
+.conferma {
+    padding: 16px 32px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: #098117;
+    color: white;
+    cursor:pointer ;
+}
+.conferma:hover {
+    background-color: gold;
+    border-color: #098117;
+    font-weight: bold;
+    
+}
+.cancella {
+    padding: 16px 32px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background-color: #900505;
+    color: white;
+    cursor:pointer ;
+}
+.cancella:hover {
+    background-color: lightsalmon;
+    font-weight: bold;
+}
+#App {
+    width: 80%;
+    margin: 100px auto;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(218, 228, 228);
+}
+#alimenti {
+    margin-top: 100px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#conteggio {
+    position: fixed;
+    top:100;
+    background-color: rgb(216, 219, 219);
+    padding: 25px;
+    width: 80%;
+    border: 1px solid white;
+    text-align: center;
+    z-index: 5;
+}
+#conteggio span {
+    font-size: 20px;
+}
+
+
+.gradient-class {
+    background: linear-gradient(to right,#33d84c, #e40202);
+    background-clip: text;
+    color:transparent;
+}
+
+
+#attività {
+    margin-top: 100px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/* #attività:hover> :not(:hover){
+    filter: blur(5px);
+    opacity: 0.5;
+} */
+.titolo {
+    margin-top: 100px;
+    background-color: rgb(235, 232, 232);
+    border-radius: 12px;
+    padding: 16px 32px;
+}
+
+/*?CARD*/
+.card {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:15px;
+    gap :10px;
+    overflow: hidden;
+    background-color: white; 
+}
+
+
+.card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+}
+.card:hover {
+    box-shadow: 1px 1px 20px yellow;
+    transform: scale(1.1);
+}
+/*?BUTTON*/
+.button {
+    margin-bottom: 20px;
+    border: none;
+    font-size: 16px;
+    padding: 16px 32px;
+    color: rgb(247, 242, 242);
+    cursor: pointer;
+    position:relative;
+    z-index:1;
+    border-radius: 12px;
+    outline: none;
+    
+}
+.button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left:0;
+    top:0;
+    border-radius:10px;
+}
+.button::before {
+    content : "";
+    background: linear-gradient(45deg,
+    #33d84c, #a50a22,#d5f786,#3407bc,#e20577);
+    position: absolute;
+    top:-2px;
+    left:-2px;
+    background-size: 600%;
+    z-index:-1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter:blur(8px);
+    animation: glowing 40s linear infinite;
+    transition:opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity:1;
+}
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+   100% {background-position: 0 0;}
+}
+    
+.button:hover::before {
+    opacity: 1;
+}
+.button:active:after {
+    background: transparent;
+}
+.button:active {
+    color: black;
+    font-weight: bold;
+}
+
+#reset  {
+    margin-top: 100px;
+}
+
+#reset .button{
+    color: #e40202;
+}
+
+.menuRapido {
+    position: fixed;
+    bottom:100px;
+    right: 0;
+    width: 50px;
+    background-color:rgb(235, 232, 232) ;
+}
+.menuRapido img:hover {
+    background-color: gold;
+}
+
+@media screen and (max-width:768px) {
+
+    #alimenti:hover> :not(:hover){
+        filter: blur(5px);
+        opacity: 0.5;
+    }
+
+    #attività:hover> :not(:hover){
+        filter: blur(5px);
+        opacity: 0.5;
+    }
+
+    .card:hover {
+        box-shadow: none;
+        transform: scale(1.1);
+    }
+}
